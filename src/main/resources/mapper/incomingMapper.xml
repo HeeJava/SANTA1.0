@@ -45,7 +45,7 @@
                p.name AS product_name,
                w.name AS warehouse_name,
                p.price,
-               i.quantity
+               (i.quantity * p.price) AS quantity
         FROM incoming i
                  JOIN products p ON i.product_id = p.product_id
                  JOIN suppliers s ON i.supplier_id = s.supplier_id

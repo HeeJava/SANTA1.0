@@ -19,9 +19,9 @@
       </h4>
     </div>
     <div class="card-body">
-      <p class="card-text" th:text="${noticeDTO.content}">
+      <pre  class="bg-light p-3 rounded border" style="font-family: 'Public Sans', Arial, sans-serif; font-size: 16px; line-height: 1.5;" th:utext="${noticeDTO.content}">
         공지사항 내용
-      </p>
+      </pre>
       <div class="d-flex justify-content-between">
         <span class="text-muted" th:text="${noticeDTO.updatedAt}">2025-01-13 작성</span>
         <div>

@@ -31,41 +31,6 @@
                 <div class="card-header bg-danger text-white text-center">
                     <h4 class="card-title m-0">🎄 입고 조회 🎅</h4>
                 </div>
-                <div class="card-body bg-white">
-                    <!-- 필터 섹션 -->
-                    <div class="p-3 bg-light border rounded">
-                        <div class="row g-3">
-                            <!-- 입고일자 -->
-                            <div class="col-md-6 d-flex align-items-center">
-                                <label for="start-date" class="form-label fw-bold text-success me-2 mb-0">입고일자</label>
-                                <input type="date" id="start-date" class="form-control w-25 me-2">
-                                <input type="date" id="end-date" class="form-control w-25 me-2">
-                                <button class="btn btn-danger">검색</button>
-                            </div>
-
-                            <!-- 상품명 -->
-                            <div class="col-md-6 d-flex align-items-center">
-                                <label for="product-name" class="form-label fw-bold text-success me-2 mb-0">상품명</label>
-                                <input type="text" id="product-name" class="form-control w-75 me-2">
-                                <button class="btn btn-danger" onclick="readProduct()">검색</button>
-                            </div>
-
-                            <!-- 공급업체 -->
-                            <div class="col-md-6 d-flex align-items-center">
-                                <label for="supplier" class="form-label fw-bold text-success me-2 mb-0">공급업체</label>
-                                <input type="text" id="supplier" class="form-control w-75 me-2">
-                                <button class="btn btn-danger">검색</button>
-                            </div>
-
-                            <!-- 창고 -->
-                            <div class="col-md-6 d-flex align-items-center">
-                                <label for="warehouse" class="form-label fw-bold text-success me-2 mb-0">창고</label>
-                                <input type="text" id="warehouse" class="form-control w-75 me-2">
-                                <button class="btn btn-danger">검색</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
                 </div>
@@ -95,7 +60,7 @@
                                 <td th:text="${IncomingDTO.warehouseName}"  class="text-center"></td>
                                 <td th:text="${IncomingDTO.quantity}"  class="text-center"></td>
                                 <td th:text="${IncomingDTO.price}"  class="text-center"></td>
-                                <td th:text="${IncomingDTO.price * IncomingDTO.quantity}"  class="text-center"></td>
+                                <td th:text="${IncomingDTO.quantity}"  class="text-center"></td>
                             </tr>
                             </tbody>
                         </table>
